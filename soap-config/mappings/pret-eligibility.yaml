@@ -1,6 +1,0 @@
-plugin: soap
-mappings: 
-  - request: 
-      operation: pret
-    response: 
-      file: responses/pret-eligible-response.xml

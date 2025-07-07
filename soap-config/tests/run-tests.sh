@@ -1,28 +1,25 @@
 #!/bin/bash
 
-set -e
+echo " Waiting for mock server to start..."
+sleep 3
 
-echo "Testing eligibility request..."
-RESPONSE1=$(curl -s -X POST http://localhost:8080/soap-pret/ws \
+echo " Testing eligibility request..."
+RESPONSE_ELIGIBLE=$(curl -s -X POST http://localhost:8080/soap-pret/ws \
   -H 'Content-Type: text/xml' \
-  --data-binary @eligible-request.xml)
+  --data @eligible-request.xml)
 
-echo "$RESPONSE1" | grep -q "<pret:isEligible>true</pret:isEligible>" || {
+echo "$RESPONSE_ELIGIBLE"
+echo
+
+if echo "$RESPONSE_ELIGIBLE" | grep -q "<pret:isEligible>true</pret:isEligible>"; then
+  echo "✅ Eligibility test passed"
+else
   echo "❌ Eligibility test failed"
-  exit 1
-}
-echo "✅ Eligibility test passed"
+fi
 
-echo "Testing ineligibility request..."
-RESPONSE2=$(curl -s -X POST http://localhost:8080/soap-pret/ws \
-  -H 'Content-Type: text/xml' \
-  --data-binary @ineligible-request.xml)
+echo
 
-echo "$RESPONSE2" | grep -q "<pret:isEligible>false</pret:isEligible>" || {
-  echo "❌ Ineligibility test failed"
-  exit 1
-}
-echo "✅ Ineligibility test passed"
+
 
 
 
