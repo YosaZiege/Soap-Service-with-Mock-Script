@@ -1,0 +1,13 @@
+plugin: soap
+mappings: 
+  - request: 
+      operation: pret
+      body: |
+        <pret:pretRequest xmlns:pret="http://soap.example.com/pret">
+          <pret:nom>Ali</pret:nom>
+          <pret:age>19</pret:age>
+          <pret:nationalite>Marocaine</pret:nationalite>
+        </pret:pretRequest>
+    response: 
+      file: responses/pret-ineligible-response.xml
+

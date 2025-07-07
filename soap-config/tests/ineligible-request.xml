@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pret="http://soap.example.com/pret">
+  <soapenv:Header/>
+  <soapenv:Body>
+    <pret:pretRequest>
+      <pret:nom>Ali</pret:nom>
+      <pret:age>19</pret:age>
+      <pret:nationalite>Marocaine</pret:nationalite>
+    </pret:pretRequest>
+  </soapenv:Body>
+</soapenv:Envelope>

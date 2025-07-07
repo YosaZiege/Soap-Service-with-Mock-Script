@@ -1,0 +1,25 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://soap.example.com/pret"
+           targetNamespace="http://soap.example.com/pret"
+           elementFormDefault="qualified">
+
+    <xs:element name="pretRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nom" type="xs:string"/>
+                <xs:element name="age" type="xs:int"/>
+                <xs:element name="nationalite" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="pretResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="isEligible" type="xs:boolean"/>
+                <xs:element name="reason" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

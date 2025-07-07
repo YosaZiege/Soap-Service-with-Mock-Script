@@ -1,0 +1,8 @@
+com/example/soap/pret/PretResponse.class
+com/example/soap/pret/package-info.class
+com/example/soap/PretService.class
+com/example/soap/PretEndpoint.class
+com/example/soap/SoapPretServiceApplication.class
+com/example/soap/pret/ObjectFactory.class
+com/example/soap/WebServiceConfig.class
+com/example/soap/pret/PretRequest.class

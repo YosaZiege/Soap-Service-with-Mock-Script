@@ -1,0 +1,2 @@
+plugin: soap
+wsdlFile: wsdl/pret.wsdl
