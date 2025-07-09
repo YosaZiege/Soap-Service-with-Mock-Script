@@ -1,0 +1,8 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    <soapenv:Body>
+        <pret:pretResponse xmlns:pret="http://soap.example.com/pret">
+            <pret:isEligible>[boolean]</pret:isEligible>
+            <pret:reason>[string]</pret:reason>
+        </pret:pretResponse>
+    </soapenv:Body>
+</soapenv:Envelope>

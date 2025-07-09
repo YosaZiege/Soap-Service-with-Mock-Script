@@ -1,0 +1,5 @@
+plugin: soap
+wsdlFile: wsdl/pret.wsdl
+response:                   
+  scriptFile: example.groovy
+

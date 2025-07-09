@@ -1,8 +1,0 @@
-plugin: soap
-wsdlFile: wsdl/pret.wsdl
-
-resources:
-  - path: "/soap-pret/ws"
-    operation: pret
-    response:
-      file: responses/pret-eligible-response.xml
